@@ -46,7 +46,7 @@ def run_system_monolith():
         elif opt == "3":
             rem = input("Name to remove: ")
            
-            idx = n.index(rem)
+            idx = n.index(rem) ##something to do with this, when name not in list is entered to be removed
             n.pop(idx)
             r.pop(idx)
             d.pop(idx)
@@ -93,3 +93,5 @@ def run_system_monolith():
         print("End of cycle.")
 
 run_system_monolith() ##added brackets to call the function
+
+##currently at 7/10 bugs fixed
