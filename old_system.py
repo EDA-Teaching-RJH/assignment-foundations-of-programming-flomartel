@@ -39,6 +39,8 @@ def run_system_monolith():
             
            
             n.append(new_name)
+            r.append(new_rank) ##now when a new rank is entered is is added to the list called r
+            d.append(new_div) ##now when a new division is entered it is added to the list called d
             print("Crew member added.")
             
         elif opt == "3":
