@@ -29,7 +29,7 @@ def run_system_monolith():
         if opt == "1":  ##changed = to ==
             print("Current Crew List:")
             
-            for i in range(4): ##changed 10 to 4 as there are only 4 things in n and r list.
+            for i in range(len(n)): ##changed 10 to 4 and then to len(n)
                 print(n[i] + " - " + r[i]) 
                 
         elif opt == "2":
