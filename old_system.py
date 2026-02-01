@@ -45,12 +45,15 @@ def run_system_monolith():
             
         elif opt == "3":
             rem = input("Name to remove: ")
-           
-            idx = n.index(rem) ##something to do with this, when name not in list is entered to be removed
-            n.pop(idx)
-            r.pop(idx)
-            d.pop(idx)
-            print("Removed.")
+
+            if rem in n:
+                idx = n.index(rem) 
+                n.pop(idx)
+                r.pop(idx)
+                d.pop(idx)
+                print("Removed.")
+            else:
+                print("Name not in list. Please try again.") ##now code doesnt crash when a name not in list is entered
             
         elif opt == "4":
             print("Analyzing...")
