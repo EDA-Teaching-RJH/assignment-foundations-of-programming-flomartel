@@ -8,7 +8,7 @@ def init_database():
 
     return names, ranks, divs, ids ##exits function and stores data
 
-def display_menu():
+def display_menu(): ##defines the display menu. user selects from here
     print ("Welcome to the ship's personnel management system!")
     print ("Current log in: -------") ##ADD SOMETHING HERE
 
@@ -21,11 +21,14 @@ def display_menu():
     print ("7. Calculate Payroll")
     print ("8. Search Officers")
 
-    opt = input("Select Option: ")
+    opt = input("Select Option: ") ##prints select option and user inputs number
     return opt
 
+def add_member():
+    
 
-    def main():
-        if opt == "1":
-            
+
+    def main(): ##defines main function. call everything from inside here
+        name = input("What is your full name? ")
+
 
