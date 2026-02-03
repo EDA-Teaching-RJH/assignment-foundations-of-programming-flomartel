@@ -10,7 +10,7 @@ def init_database():
 
 def display_menu(user_name): ##defines the display menu. user enters number and selects from here
     print ("Welcome to the ship's personnel management system!")
-    print ("Current log in: ", user_name) ##ADD SOMETHING HERE
+    print ("Current log in: ", user_name) ##sets current login as the input asked in main() line 76
 
     print ("1. Add Member")
     print ("2. Remove Member")
@@ -19,7 +19,7 @@ def display_menu(user_name): ##defines the display menu. user enters number and 
     print ("5. Search Crew")
     print ("6. Search by Division")
     print ("7. Calculate Payroll")
-    print ("8. Search Officers")
+    print ("8. Search Officers")## ^ list of options
 
     opt = input("Select Option: ") ##prints select option and user inputs number
     return opt
@@ -73,22 +73,22 @@ def update_rank(names, ranks, divs, ids):
 
 def main(): ##defines main function. call everything from inside here
         names, ranks, divs, ids = init_database() ## calls init_database inside main and retuns the 4 lists
-        user_name = input("What is your full name? ")
+        user_name = input("What is your full name? ") ##asks user for name, is displayed in 'display menu' at start
         
 
         active = True
-        while active:
+        while active: ##sets while loop
             opt = display_menu(user_name)
 
             if opt == "1":
-                add_member(names, ranks, divs, ids)
+                add_member(names, ranks, divs, ids) ##if user selects "1", this function is called from inside main
             elif opt == "2":
                 remove_member(names, ranks, divs, ids)
             elif opt == "3":
                 update_rank(names, ranks, divs, ids)
              
                  
-
+##remember to break while loop, probably add another option to display menu for exit
 
 
 
