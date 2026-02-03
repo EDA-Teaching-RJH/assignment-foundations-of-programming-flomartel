@@ -71,8 +71,8 @@ def display_roster(names, ranks, divs, ids):
     print("Current Roster: ")
 
     for i in range(len(names)):
-        print(names[i] + " - " + ranks[i] + " - " + divs[i] + " - " + ids[i])
-
+        print(names[i] + " - " + ranks[i] + " - " + divs[i] + " - " + ids[i]) ##ids is int not str so doesnt work. look at this.
+##working here ^^^^^
 
 
 
