@@ -59,13 +59,19 @@ def remove_member(names, ranks, divs, ids):
     else:
         print("ID number not in list. Please try again.") #prompts user to try again if ID isnt found
 
-def update_rank(names, ranks, divs, ids):
+def update_rank(names, ranks, ids):
     update_ID = int(input("Enter ID number to update: "))
     if update_ID in ids: #finds member by ID number
         idx = ids.index(update_ID)
         updated_rank = input("Please input updated rank: ") ##here put in segment from lines 33-36, valid rank list
         ranks[idx] = updated_rank
         print("Rank updated.")
+
+def display_roster(names, ranks, divs, ids):
+    print("Current Roster: ")
+
+    for i in range(len(names)):
+        print(names[i] + " - " + ranks[i] + " - " + divs[i] + " - " + ids[i])
 
 
 
@@ -86,6 +92,8 @@ def main(): ##defines main function. call everything from inside here
                 remove_member(names, ranks, divs, ids)
             elif opt == "3":
                 update_rank(names, ranks, divs, ids)
+            elif opt == "4":
+                display_roster(names, ranks, divs, ids)
              
                  
 ##remember to break while loop, probably add another option to display menu for exit
