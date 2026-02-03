@@ -8,7 +8,7 @@ def init_database():
 
     return names, ranks, divs, ids ##exits function and stores data
 
-def display_menu(user_name): ##defines the display menu. user selects from here
+def display_menu(user_name): ##defines the display menu. user enters number and selects from here
     print ("Welcome to the ship's personnel management system!")
     print ("Current log in: ", user_name) ##ADD SOMETHING HERE
 
@@ -28,7 +28,7 @@ def add_member(names, ranks, divs, ids):
     new_name = input("Enter new member's name: ")
     new_rank = input("Enter new member's rank: ")
     new_div = input("Enter new member's division: ")
-    new_id = input("Enter new member's ID number: ") ##asks user for new name,rank,division,id number
+    new_id = int(input("Enter new member's ID number: ")) ##asks user for new name,rank,division,id number
 
     valid_TNG_ranks = ["Captain", "Commander", "Lt. Commander", "Lieutenant"]
     if new_rank not in valid_TNG_ranks:
@@ -47,7 +47,7 @@ def add_member(names, ranks, divs, ids):
 
 
 def remove_member(names, ranks, divs, ids):
-    rem = input("Enter ID number to remove: ") #promts user to enter ID number
+    rem = int(input("Enter ID number to remove: ")) #promts user to enter ID number
 
     if rem in ids: #if the entered ID number is present it looks through the lists
         idx = ids.index(rem)
@@ -59,6 +59,15 @@ def remove_member(names, ranks, divs, ids):
     else:
         print("ID number not in list. Please try again.") #prompts user to try again if ID isnt found
 
+def update_rank(names, ranks, divs, ids):
+    update_ID = int(input("Enter ID number to update: "))
+    if update_ID in ids: #finds member by ID number
+        idx = ids.index(update_ID)
+        updated_rank = input("Please input updated rank: ") ##here put in segment from lines 33-36, valid rank list
+        ranks[idx] = updated_rank
+        print("Rank updated.")
+
+
 
 
 
@@ -69,16 +78,18 @@ def main(): ##defines main function. call everything from inside here
 
         active = True
         while active:
-             opt = display_menu(user_name)
+            opt = display_menu(user_name)
 
-        if opt == "1":
-            add_member(names, ranks, divs, ids)
-        elif opt == "2":
-            remove_member(names, ranks, divs, ids)
+            if opt == "1":
+                add_member(names, ranks, divs, ids)
+            elif opt == "2":
+                remove_member(names, ranks, divs, ids)
+            elif opt == "3":
+                update_rank(names, ranks, divs, ids)
              
                  
 
 
 
 
-            main()
+main()
