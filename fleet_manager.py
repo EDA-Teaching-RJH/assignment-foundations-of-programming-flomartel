@@ -46,9 +46,23 @@ def add_member(names, ranks, divs, ids):
     print("New crew member added.")   
 
 
-##tomorrow do def remove_member()
+def remove_member(names, ranks, divs, ids):
+    rem = input("Enter ID number to remove: ") #promts user to enter ID number
 
-    def main(): ##defines main function. call everything from inside here
+    if rem in ids: #if the entered ID number is present it looks through the lists
+        idx = ids.index(rem)
+        names.pop(idx)
+        ranks.pop(idx)
+        divs.pop(idx)
+        ids.pop(idx) #removes member from every list to keep all lists in sync
+        print ("Member removed.")
+    else:
+        print("ID number not in list. Please try again.") #prompts user to try again if ID isnt found
+
+
+
+
+def main(): ##defines main function. call everything from inside here
         names, ranks, divs, ids = init_database() ## calls init_database inside main and retuns the 4 lists
         user_name = input("What is your full name? ")
         
@@ -57,12 +71,14 @@ def add_member(names, ranks, divs, ids):
         while active:
              opt = display_menu(user_name)
 
-             if opt == "1":
-                 add_member(names, ranks, divs, ids)
+        if opt == "1":
+            add_member(names, ranks, divs, ids)
+        elif opt == "2":
+            remove_member(names, ranks, divs, ids)
+             
+                 
 
-            ##elif opt 2 remove_member()
 
 
 
-
-    main()
+            main()
