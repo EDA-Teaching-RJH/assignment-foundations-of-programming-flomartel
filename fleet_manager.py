@@ -73,7 +73,11 @@ def display_roster(names, ranks, divs, ids):
     for i in range(len(names)):
         print(names[i] + " - " + ranks[i] + " - " + divs[i] + " - " + str(ids[i])) ## prints a list of all crew members. had to turn ids to str to print
 
-
+def search_crew(names, ranks, divs, ids):
+    search_term = input("Enter name to search for crew member: ")
+    for i in range(len(names)):
+        if search_term in names[i]: ##looks for name given by user
+            print(names[i] + " - " + ranks[i] + " - " + divs[i] + " - " + str(ids[i])) ##prints list of crew member given
 
 
 
@@ -94,6 +98,8 @@ def main(): ##defines main function. call everything from inside here
                 update_rank(names, ranks, divs, ids)
             elif opt == "4":
                 display_roster(names, ranks, divs, ids)
+            elif opt == "5":
+                search_crew(names, ranks, divs, ids)
              
                  
 ##remember to break while loop, probably add another option to display menu for exit
