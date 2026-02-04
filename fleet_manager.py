@@ -76,7 +76,7 @@ def display_roster(names, ranks, divs, ids):
 def search_crew(names, ranks, divs, ids):
     search_term = input("Enter name to search for crew member: ")
     for i in range(len(names)):
-        if search_term in names[i]: ##looks for name given by user
+        if search_term.lower() in names[i].lower(): ##looks for name given by user. changed to .lower so can be put in lower case
             print(names[i] + " - " + ranks[i] + " - " + divs[i] + " - " + str(ids[i])) ##prints list of crew member given
 
 
