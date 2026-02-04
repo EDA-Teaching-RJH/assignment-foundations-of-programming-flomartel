@@ -71,8 +71,8 @@ def display_roster(names, ranks, divs, ids):
     print("Current Roster: ")
 
     for i in range(len(names)):
-        print(names[i] + " - " + ranks[i] + " - " + divs[i] + " - " + ids[i]) ##ids is int not str so doesnt work. look at this.
-##working here ^^^^^
+        print(names[i] + " - " + ranks[i] + " - " + divs[i] + " - " + str(ids[i])) ## prints a list of all crew members. had to turn ids to str to print
+
 
 
 
