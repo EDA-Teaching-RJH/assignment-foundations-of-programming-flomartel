@@ -87,6 +87,8 @@ def filter_by_division(names, divs):
                 if divs[i] == div_name: ##looks for names under specified division
                     print(names[i]) ##prints names listed under that division
 
+##working here ^^^^^
+
 
 def main(): ##defines main function. call everything from inside here
         names, ranks, divs, ids = init_database() ## calls init_database inside main and retuns the 4 lists
