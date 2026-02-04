@@ -30,7 +30,7 @@ def add_member(names, ranks, divs, ids):
     new_div = input("Enter new member's division: ")
     new_id = int(input("Enter new member's ID number: ")) ##asks user for new name,rank,division,id number
 
-    valid_TNG_ranks = ["Captain", "Commander", "Lt. Commander", "Lieutenant"]
+    valid_TNG_ranks = ["Captain", "Commander", "Lt. Commander", "Lieutenant", "Ensign"]
     if new_rank not in valid_TNG_ranks:
         print("Please enter a valid TNG rank") ## if rank given isnt one of the listed it will prompt for another rank
         return
