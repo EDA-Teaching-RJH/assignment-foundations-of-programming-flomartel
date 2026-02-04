@@ -79,6 +79,13 @@ def search_crew(names, ranks, divs, ids):
         if search_term.lower() in names[i].lower(): ##looks for name given by user. changed to .lower so can be put in lower case
             print(names[i] + " - " + ranks[i] + " - " + divs[i] + " - " + str(ids[i])) ##prints list of crew member given
 
+def filter_by_division(names, divs):
+    div_name = input("Enter division name: ") ##promps user for division name
+    match div_name:
+        case "Command" | "Operations" | "Security" | "Sciences": ##all the possible divisions
+            for i in range(len(names)):
+                if divs[i] == div_name: ##looks for names under specified division
+                    print(names[i]) ##prints names listed under that division
 
 
 def main(): ##defines main function. call everything from inside here
@@ -100,6 +107,8 @@ def main(): ##defines main function. call everything from inside here
                 display_roster(names, ranks, divs, ids)
             elif opt == "5":
                 search_crew(names, ranks, divs, ids)
+            elif opt == "6":
+                filter_by_division(names, divs)
              
                  
 ##remember to break while loop, probably add another option to display menu for exit
