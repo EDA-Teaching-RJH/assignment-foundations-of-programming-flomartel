@@ -19,7 +19,8 @@ def display_menu(user_name): ##defines the display menu. user enters number and 
     print ("5. Search Crew")
     print ("6. Search by Division")
     print ("7. Calculate Payroll")
-    print ("8. Search Officers")## ^ list of options
+    print ("8. Search Officers")
+    print ("9. Exit") ## ^ list of options
 
     opt = input("Select Option: ") ##prints select option and user inputs number
     return opt
@@ -87,7 +88,7 @@ def filter_by_division(names, divs):
                 if divs[i] == div_name: ##looks for names under specified division
                     print(names[i]) ##prints names listed under that division
 
-##working here ^^^^^
+def calculate_payroll(ranks):
 
 
 def main(): ##defines main function. call everything from inside here
@@ -104,17 +105,21 @@ def main(): ##defines main function. call everything from inside here
             elif opt == "2":
                 remove_member(names, ranks, divs, ids)
             elif opt == "3":
-                update_rank(names, ranks, divs, ids)
+                update_rank(names, ranks, ids)
             elif opt == "4":
                 display_roster(names, ranks, divs, ids)
             elif opt == "5":
                 search_crew(names, ranks, divs, ids)
             elif opt == "6":
                 filter_by_division(names, divs)
+            elif opt == "7":
+                calculate_payroll(ranks)
+
+
+            elif opt == "9":
+                break ## stops running, exits
              
                  
 ##remember to break while loop, probably add another option to display menu for exit
-
-
 
 main()
