@@ -98,12 +98,15 @@ def calculate_payroll(ranks):
             total = total + 700
         elif rank == "Lt. Commander":
             total = total + 500
-        elif rank == "Lietenant":
+        elif rank == "Lieutenant":
             total = total + 350
         elif rank == "Ensign":
             total = total + 200
 
     return total
+
+def count_officers(ranks):
+    
 
 
 
@@ -130,7 +133,7 @@ def main(): ##defines main function. call everything from inside here
                 filter_by_division(names, divs)
             elif opt == "7":
                 total = calculate_payroll(ranks)
-                print("Total cost of current crew: ", total)
+                print("Total cost of current crew:",total) ##prints total cost of crew
 
 
             elif opt == "9":
