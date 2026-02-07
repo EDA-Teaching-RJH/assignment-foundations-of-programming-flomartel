@@ -141,11 +141,12 @@ def main(): ##defines main function. call everything from inside here
                 print("Total cost of current crew:",total) ##prints total cost of crew
             elif opt == "8":
                 total = count_officers(ranks)
-                print ("Total number of high ranking offiers:",total)
-
+                print ("Total number of high ranking officers:",total) ##prints total number of high ranking officers
 
             elif opt == "9":
                 break ## stops running, exits
+            else:
+                print("Not a valid input. Please try again.")
              
                  
 ##remember to break while loop, probably add another option to display menu for exit
