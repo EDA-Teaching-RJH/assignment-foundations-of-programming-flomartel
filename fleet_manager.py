@@ -106,7 +106,12 @@ def calculate_payroll(ranks):
     return total
 
 def count_officers(ranks):
-    
+    total = 0
+    for rank in ranks:
+        if rank == "Captain" or rank == "Commander":
+            total = total + 1
+    return total
+            
 
 
 
@@ -134,6 +139,9 @@ def main(): ##defines main function. call everything from inside here
             elif opt == "7":
                 total = calculate_payroll(ranks)
                 print("Total cost of current crew:",total) ##prints total cost of crew
+            elif opt == "8":
+                total = count_officers(ranks)
+                print ("Total number of high ranking offiers:",total)
 
 
             elif opt == "9":
