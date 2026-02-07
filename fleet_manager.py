@@ -1,4 +1,4 @@
-##Part B, the modular architechture 
+##Part B, the modular architechture. FINISHED 7/2/26
 
 def init_database():
     names = ["Picard", "Riker", "Data", "Worf", "La Forge"] ##names of startrek tng characters
@@ -148,7 +148,5 @@ def main(): ##defines main function. call everything from inside here
             else:
                 print("Not a valid input. Please try again.")
              
-                 
-##remember to break while loop, probably add another option to display menu for exit
 
 main()
