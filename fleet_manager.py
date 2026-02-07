@@ -89,6 +89,21 @@ def filter_by_division(names, divs):
                     print(names[i]) ##prints names listed under that division
 
 def calculate_payroll(ranks):
+    total = 0
+
+    for rank in ranks:
+        if rank == "Captain":
+            total = total + 1000
+        elif rank == "Commander":
+            total = total + 700
+        elif rank == "Lt. Commander":
+            total = total + 500
+        elif rank == "Lietenant":
+            total = total + 350
+        elif rank == "Ensign":
+            total = total + 200
+
+        print("Total cost of current crew: ", total)
 
 
 def main(): ##defines main function. call everything from inside here
