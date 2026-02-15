@@ -10,7 +10,7 @@ def init_database():
 
 def display_menu(user_name): ##defines the display menu. user enters number and selects from here
     print ("Welcome to the ship's personnel management system!")
-    print ("Current log in: ", user_name) ##sets current login as the input asked in main() line 76
+    print ("Current log in: ", user_name) ##sets current login as the input asked in main() line 120
 
     print ("1. Add Member")
     print ("2. Remove Member")
@@ -20,12 +20,12 @@ def display_menu(user_name): ##defines the display menu. user enters number and 
     print ("6. Search by Division")
     print ("7. Calculate Payroll")
     print ("8. Search Officers")
-    print ("9. Exit") ## ^ list of options
+    print ("9. Exit") ## ^ list of options. also added exit as an extra option
 
     opt = input("Select Option: ") ##prints select option and user inputs number
     return opt
 
-def add_member(names, ranks, divs, ids):
+def add_member(names, ranks, divs, ids): 
     new_name = input("Enter new member's name: ")
     new_rank = input("Enter new member's rank: ")
     new_div = input("Enter new member's division: ")
