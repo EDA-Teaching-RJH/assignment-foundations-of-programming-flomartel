@@ -82,7 +82,7 @@ def run_system_monolith():
         if len(n) > 0:
             print("Database has entries.")
         else:
-                print("Database empty.")
+                print("Database empty.")##changed two if statements to if and else statement
 
 
         
@@ -97,4 +97,3 @@ def run_system_monolith():
 
 run_system_monolith() ##added brackets to call the function
 
-##currently at 7/10 bugs fixed
